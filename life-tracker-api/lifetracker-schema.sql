@@ -6,19 +6,21 @@ CREATE TABLE users (
     is_admin    BOOLEAN NOT NULL DEFAULT FALSE
 );
 
-CREATE TABLE createexercise (
+CREATE TABLE exercise (
   id          SERIAL PRIMARY KEY,
   name        TEXT NOT NULL,
   category    TEXT NOT NULL DEFAULT 'misc',
   intensity   TEXT NOT NULL,
-  length      INTEGER NOT NULL, 
-  created_at  TIMESTAMP DEFAULT NOW()
+  duration      INTEGER NOT NULL, 
+  created_at  TIMESTAMP DEFAULT NOW(),
+  user_id  INTEGER REFERENCES users(id) ON DELETE CASCADE 
 );
 
-CREATE TABLE exercises (
-  id          SERIAL PRIMARY KEY,
-  customer_id INTEGER NOT NULL REFERENCES users(id) ON DELETE SET NULL,  
-    exercise_id INTEGER NOT NULL REFERENCES createexercise(id) ON DELETE SET NULL
+CREATE TABLE activity (
+  id  SERIAL PRIMARY KEY,
+  activity_type VARCHAR(50) NOT NULL,
+  exercise_id INTEGER REFERENCES exercise(id) ON DELETE CASCADE,
+  created_at TIMESTAMP DEFAULT NOW()
 );
 
 -- CREATE TABLE excercises_details (
