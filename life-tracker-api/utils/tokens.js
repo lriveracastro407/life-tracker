@@ -7,7 +7,7 @@ const generateToken = (data) =>
 
 const createUserJwt = (creds) => {
   validateFields({
-    required: ["email"],
+    required: ["email", "id"],
     obj: creds,
     location: "token generation",
   });
@@ -15,6 +15,7 @@ const createUserJwt = (creds) => {
   const payload = {
     email: creds.email,
     isAdmin: creds.isAdmin || false,
+    id: creds.id,
   };
 
   return generateToken(payload);
