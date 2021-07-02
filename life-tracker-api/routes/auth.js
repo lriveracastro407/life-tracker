@@ -39,18 +39,5 @@ router.post("/register", async (req, res, next) => {
   }
 });
 
-// router.get("/", async (req, res, next ) => {
-//     //home screen
-// })
 
-// router.get("/exercise", authenticatedUser, async(req, res, next) => {
-//     //only authenticed users can access their exercise page with an overview of what exercises
-//     //they have done as well as an option to add more excercises
-//     //
-// })
-
-// router.get("/activity", authenticedUser, async(req,res,next) => {
-//     //only authernticed users can access their own activity page with an overview of exercise information
-//     //users can also add more exercises from this page
-// })
 module.exports = router;

@@ -6,6 +6,7 @@ const { PORT } = require("./config");
 const { extractUserFromJwt } = require("./middleware/security");
 const authRoutes = require("./routes/auth");
 const exerciseRoutes = require("./routes/exercise");
+const activityRoutes = require("./routes/activites");
 
 const app = express();
 app.use(cors());
@@ -16,7 +17,7 @@ app.use(extractUserFromJwt);
 
 app.use("/auth", authRoutes);
 app.use("/exercise", exerciseRoutes);
-//app.use("/activity", activityRoutes)
+app.use("/activity", activityRoutes);
 
 /** Handle 404 errors -- this matches everything */
 app.use((req, res, next) => {

@@ -14,7 +14,6 @@ const createUserJwt = (creds) => {
 
   const payload = {
     email: creds.email,
-    isAdmin: creds.isAdmin || false,
     id: creds.id,
   };
 

@@ -1,16 +1,16 @@
 CREATE TABLE users (
   id          SERIAL PRIMARY KEY,
   email       TEXT NOT NULL UNIQUE CHECK (POSITION('@' IN email) > 1),
+  username    TEXT NOT NULL UNIQUE,
   password    TEXT NOT NULL,
-  name        TEXT NOT NULL,
-    is_admin    BOOLEAN NOT NULL DEFAULT FALSE
+  name        TEXT NOT NULL
 );
 
 CREATE TABLE exercise (
   id          SERIAL PRIMARY KEY,
   name        TEXT NOT NULL,
   category    TEXT NOT NULL DEFAULT 'misc',
-  intensity   TEXT NOT NULL,
+  intensity   INTEGER NOT NULL,
   duration      INTEGER NOT NULL, 
   created_at  TIMESTAMP DEFAULT NOW(),
   user_id  INTEGER REFERENCES users(id) ON DELETE CASCADE 
