@@ -1,0 +1,54 @@
+.Exercise {
+  color: white;
+}
+
+.Exercise a {
+  text-decoration: none;
+  color: white;
+}
+.subheader {
+  font-size: 42px;
+  font-weight: 700;
+  color: white;
+}
+h1 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.button.outline.gold {
+  background: transparent;
+  color: purple;
+  border: 1px solid purple;
+}
+
+.button.small {
+  padding: 10px 20px;
+  max-height: 40px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 16px 20px; */
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  /* background: transparent; */
+  outline: none;
+  transition: all 0.2s ease;
+  /* border: 1px solid transparent; */
+  white-space: nowrap;
+}
+.feed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

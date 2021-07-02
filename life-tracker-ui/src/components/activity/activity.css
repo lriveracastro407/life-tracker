@@ -1,0 +1,74 @@
+.activity-btns {
+  display: flex;
+  justify-content: flex-end;
+}
+.activity-btns a {
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 18px;
+  margin: 18px;
+  font-weight: 500;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.exercise-btn {
+  color: #2b6684;
+  border: 2px solid #2b6684;
+}
+.exercise-btn:hover {
+  color: #fff;
+  background-color: #2b6684;
+}
+.nutrition-btn {
+  color: #012e67;
+  border: 2px solid #012e67;
+}
+.nutrition-btn:hover {
+  color: #fff;
+  background-color: #012e67;
+}
+.sleep-btn {
+  color: #032e42;
+  border: 2px solid #032e42;
+}
+.sleep-btn:hover {
+  color: #fff;
+  background-color: #032e42;
+}
+.aty-card {
+  border-radius: 12px;
+  background-color: #4caf50;
+  text-decoration: none;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 10px;
+  width: 360px;
+  height: 220px;
+}
+.header {
+  font-size: 42px;
+  font-weight: 700;
+  color: white;
+}
+
+.aty-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.aty-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: x-large;
+}
+
+.summary {
+  margin-top: 100px;
+}
